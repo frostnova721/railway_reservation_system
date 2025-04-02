@@ -9,7 +9,7 @@ const LoginPopup = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState(false)
 
-  const api = process.env.API ?? "http://127.0.0.1:3000/user/";
+  const api = process.env.API || "http://127.0.0.1:3000/user/";
 
   const nav = useNavigate();
 

@@ -11,7 +11,7 @@ const SignupWidget = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const api = (process.env.API ?? "http://127.0.0.1:3000") + "/user/";
+    const api = (process.env.API || "http://127.0.0.1:3000") + "/user/";
     console.log("Signup attempted with:", { name, email, password });
     await axios.post(api + "register", {
       email,

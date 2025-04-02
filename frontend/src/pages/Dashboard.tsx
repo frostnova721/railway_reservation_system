@@ -16,7 +16,7 @@ export const Dashboard = () => {
         const token = localStorage.getItem("token");
         if (!token) return nav("/");
 
-        const res = await axios.get("http://localhost:3000/user/profile", {
+        const res = await axios.get(process.env.API + "/user/profile", {
           headers: { Authorization: `Bearer ${token}` },
         });
 

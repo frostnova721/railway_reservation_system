@@ -37,6 +37,8 @@ const TrainSelectionPopup: React.FC = () => {
   // Get user from session storage
   const user: User = JSON.parse(sessionStorage.getItem("user") || "{}");
 
+  const api = process.env.API ?? "http://127.0.0.1:3000"
+
   // Fetch trains on component mount
   useEffect(() => {
     fetchTrains();
@@ -45,7 +47,7 @@ const TrainSelectionPopup: React.FC = () => {
   const fetchTrains = async () => {
     try {
       setLoading(true);
-      const res = await axios.get("http://127.0.0.1:3000/train/get");
+      const res = await axios.get(api + "/train/get");
       setTrains(res.data);
       setError("");
     } catch (err) {
@@ -58,7 +60,7 @@ const TrainSelectionPopup: React.FC = () => {
 
   const bookSeat = async (seatNo: number, compId: number, seatId: number) => {
     try {
-      await axios.post("http://127.0.0.1:3000/book/", {
+      await axios.post(api + "/book/", {
         compartmentId: compId,
         seatNumber: seatNo,
         userId: user.userId,

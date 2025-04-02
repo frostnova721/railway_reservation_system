@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "start:backend": "tsx backend/src/server.ts",
-    "dev:backend": "nodemon --exec npm run start:backend"
+    "dev:backend": "nodemon --exec npm run start:backend",
+    "build:backend": "tsc --project tsconfig.back.json"
   },
   "keywords": [],
   "author": "",

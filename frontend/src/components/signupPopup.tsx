@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { redirect, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const SignupWidget = () => {
   const [name, setName] = useState("");
@@ -13,7 +13,7 @@ const SignupWidget = () => {
     e.preventDefault();
     const api = "http://127.0.0.1:3000/user/";
     console.log("Signup attempted with:", { name, email, password });
-    const regRes = await axios.post(api + "register", {
+    await axios.post(api + "register", {
       email,
       name,
       password,

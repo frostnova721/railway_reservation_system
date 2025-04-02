@@ -90,6 +90,7 @@ const TrainSelectionPopup: React.FC = () => {
     try {
       // Implement your cancel booking logic here
       alert("Cancel booking functionality not implemented yet");
+      console.log(seatId);
 
       // Refresh data after cancellation
       fetchTrains();

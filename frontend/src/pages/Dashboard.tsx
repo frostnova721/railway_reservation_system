@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 export const Dashboard = () => {
   const [showPopup, setPopup] = useState(false);
   const [user, setUser] = useState({ name: "Anonymous", id: "N/A" });
-  const [booked, setBooked] = useState(0);
+  // const [booked, setBooked] = useState(0);
 
   const nav = useNavigate();
 

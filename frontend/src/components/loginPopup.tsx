@@ -10,7 +10,7 @@ const LoginPopup = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState(false)
 
-  const api = API;
+  const api = API + "/user/";
 
   const nav = useNavigate();
 

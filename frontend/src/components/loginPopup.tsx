@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../style/login.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { API } from "../statics";
 
 const LoginPopup = () => {
   const [email, setEmail] = useState("");
@@ -9,7 +10,7 @@ const LoginPopup = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState(false)
 
-  const api = import.meta.env.API || "http://127.0.0.1:3000/user/";
+  const api = API;
 
   const nav = useNavigate();
 

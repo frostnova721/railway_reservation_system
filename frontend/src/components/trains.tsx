@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { API } from "../statics";
 
 interface Seat {
   id: number;
@@ -37,7 +38,7 @@ const TrainSelectionPopup: React.FC = () => {
   // Get user from session storage
   const user: User = JSON.parse(sessionStorage.getItem("user") || "{}");
 
-  const api = import.meta.env.API ?? "http://127.0.0.1:3000"
+  const api = API
 
   // Fetch trains on component mount
   useEffect(() => {

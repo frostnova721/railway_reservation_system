@@ -3,6 +3,7 @@ import "../style/dashboard.css";
 import axios from "axios";
 import TrainSelectionPopup from "../components/trains";
 import { useNavigate } from "react-router-dom";
+import { API } from "../statics";
 
 export const Dashboard = () => {
   const [showPopup, setPopup] = useState(false);
@@ -29,7 +30,7 @@ export const Dashboard = () => {
         if (!token) return nav("/");
 
         const res = await axios.get(
-          (import.meta.env.API || "http://127.0.0.1:3000") + "/user/profile",
+          API + "/user/profile",
           {
             headers: { Authorization: `Bearer ${token}` },
           }

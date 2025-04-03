@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { API } from "../statics";
 
 const SignupWidget = () => {
   const [name, setName] = useState("");
@@ -11,7 +12,7 @@ const SignupWidget = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const api = (import.meta.env.API || "http://127.0.0.1:3000") + "/user/";
+    const api = API + "/user/";
     console.log("Signup attempted with:", { name, email, password });
     await axios.post(api + "register", {
       email,

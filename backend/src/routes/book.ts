@@ -15,6 +15,7 @@ router.post("/", async (req, res) => {
 
 router.get("/booked", authenticateToken, async (req, res) => {
   const { userId } = req.body.user;
+  console.log('hi');
   const booked = await seatdb.getBooked(userId);
   res.status(200).json(booked);
 });

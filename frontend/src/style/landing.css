@@ -98,6 +98,7 @@
 .popup {
     width: 60%;
     height: 60%;
+    min-height: 450px;
     border-radius: 25px;
     background-color: #242424;
 }

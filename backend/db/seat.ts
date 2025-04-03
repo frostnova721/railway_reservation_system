@@ -28,7 +28,9 @@ export class SeatDB {
   public getBooked = async (userId: number) => {
     return await prisma.seat.findMany({
       where: {
-        id: userId,
+        user : {
+          id : userId
+        }
       }, include: {
         compartment : {
           include : {

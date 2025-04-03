@@ -9,6 +9,7 @@
     .left, .right {
         width: 100%;
         margin: 16px;
+        background-color: #242424 !important;
     }
 
     .popup {
@@ -58,6 +59,9 @@
 
 .left {
     width: 40%;
+    background-color: #303030;
+    margin: 1rem;
+    border-radius: 25px;
 }
 
 .right {
@@ -104,6 +108,7 @@
 
 .popup {
     width: 60%;
+    min-height: fit-content;
     height: 60%;
     border-radius: 25px;
     background-color: #242424;

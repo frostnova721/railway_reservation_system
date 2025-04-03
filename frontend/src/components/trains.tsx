@@ -37,7 +37,7 @@ const TrainSelectionPopup: React.FC = () => {
   // Get user from session storage
   const user: User = JSON.parse(sessionStorage.getItem("user") || "{}");
 
-  const api = process.env.API ?? "http://127.0.0.1:3000"
+  const api = import.meta.env.API ?? "http://127.0.0.1:3000"
 
   // Fetch trains on component mount
   useEffect(() => {
